@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "403237431068",
+    "project_id": "abobagram",
+    "storage_bucket": "abobagram.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:403237431068:android:72d9a7fcec76de6e34fcd9",
+        "android_client_info": {
+          "package_name": "android.example.abobamessenger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "403237431068-tp6surs7seap76qdgj3oev43ml1ink2g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHjpqJt9x7I_wPFdLLTEcKG2Cf_ZequFc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "403237431068-tp6surs7seap76qdgj3oev43ml1ink2g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

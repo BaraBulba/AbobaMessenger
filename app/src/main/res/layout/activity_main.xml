@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_screen_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#159CAE"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/username_edittext_registration"
+        android:layout_width="347dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rounded_shape_edittext"
+        android:backgroundTint="#FFFFFF"
+        android:drawableStart="@drawable/custom_person_icon"
+        android:drawablePadding="8dp"
+        android:ems="10"
+        android:hint="Имя пользователя"
+        android:inputType="textPersonName"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_picker_button" />
+
+    <EditText
+        android:id="@+id/email_edittext_registration"
+        android:drawablePadding="8dp"
+        android:drawableLeft="@drawable/custom_email_icon"
+        android:textStyle="italic"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_shape_edittext"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/username_edittext_registration"
+        app:layout_constraintStart_toStartOf="@+id/username_edittext_registration"
+        app:layout_constraintTop_toBottomOf="@+id/username_edittext_registration" />
+
+    <EditText
+        android:id="@+id/password_edittext_registration"
+        android:drawablePadding="8dp"
+        android:drawableStart="@drawable/custom_lock_icon"
+        android:layout_width="0dp"
+        android:textStyle="italic"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_shape_edittext"
+        android:ems="10"
+        android:hint="Пароль"
+        android:inputType="textPassword"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/email_edittext_registration"
+        app:layout_constraintStart_toStartOf="@+id/email_edittext_registration"
+        app:layout_constraintTop_toBottomOf="@+id/email_edittext_registration" />
+
+    <Button
+        android:id="@+id/registration_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_button"
+        android:text="Зарегистрироваться"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/password_edittext_registration"
+        app:layout_constraintStart_toStartOf="@+id/password_edittext_registration"
+        app:layout_constraintTop_toBottomOf="@+id/password_edittext_registration" />
+
+    <TextView
+        android:id="@+id/already_have_account_textView"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Уже есть аккаунт?"
+        app:layout_constraintEnd_toEndOf="@+id/registration_button"
+        app:layout_constraintStart_toStartOf="@+id/registration_button"
+        app:layout_constraintTop_toBottomOf="@+id/registration_button" />
+
+    <Button
+        android:id="@+id/image_picker_button"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rounded_image_button"
+        android:text="Выберите\nФотографию"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
