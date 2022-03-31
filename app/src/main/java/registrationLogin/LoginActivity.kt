@@ -1,12 +1,14 @@
-package android.example.abobamessenger
+package registrationLogin
 
 import android.content.Intent
+import android.example.abobamessenger.R
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
+import messages.LatestMessegesActivity
 
 class LoginActivity: AppCompatActivity() {
 
@@ -34,6 +36,9 @@ class LoginActivity: AppCompatActivity() {
         FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
             .addOnCompleteListener{
                 if (!it.isSuccessful) return@addOnCompleteListener
+                val intent = Intent(this, LatestMessegesActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
+                startActivity(intent)
             }
             .addOnFailureListener{
                 Toast.makeText(this,"Не удалось войти в аккаунт: ${it.message}", Toast.LENGTH_SHORT).show()

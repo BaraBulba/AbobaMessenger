@@ -10,17 +10,36 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AbobaMessenger">
         <activity
-            android:name=".MainActivity"
+            android:name="messages.ChatLogActivity"
+            android:exported="false" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="messages.LatestMessegesActivity" />
+        </activity>
+        <activity
+            android:name=".NewMessageActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="messages.LatestMessegesActivity" />
+        </activity>
+        <activity
+            android:name="messages.LatestMessegesActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity">
-
+        <activity
+            android:name=".RegistrationActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+        <activity android:name="registrationLogin.LoginActivity" />
     </application>
 
 </manifest>
