@@ -9,7 +9,7 @@
     android:background="@color/white">
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/editText_chat_log"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
@@ -17,10 +17,11 @@
         android:layout_marginRight="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
+        android:paddingStart="16dp"
         android:ems="10"
         android:hint="Сообщение"
         android:textStyle="italic"
-        android:background="@color/white"
+        android:background="@drawable/background_edittext_border"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/chat_log_sendbutton"
@@ -46,7 +47,7 @@
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
         android:background="#159CAE"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/editText_chat_log"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

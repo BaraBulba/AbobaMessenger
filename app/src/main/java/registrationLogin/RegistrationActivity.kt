@@ -13,6 +13,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
 import kotlinx.android.synthetic.main.registration_activity.*
 import messages.LatestMessegesActivity
+import models.User
 import registrationLogin.LoginActivity
 import java.util.*
 
@@ -22,10 +23,12 @@ class RegistrationActivity : AppCompatActivity() {
         val TAG = "RegistrationActivity"
     }
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.registration_activity)
 
+        supportActionBar?.hide()
 
         registration_button.setOnClickListener {
             performRegister()
@@ -113,7 +116,7 @@ class RegistrationActivity : AppCompatActivity() {
         val uid = FirebaseAuth.getInstance().uid ?: ""
         val ref = FirebaseDatabase.getInstance("https://abobagram-default-rtdb.europe-west1.firebasedatabase.app").getReference("/users/$uid")
 
-        val user = User(uid, username_edittext_registration.text.toString(), profileImageUrl)
+        val user = User (uid, username_edittext_registration.text.toString(), profileImageUrl)
 
         ref.setValue(user)
             .addOnSuccessListener {
@@ -128,6 +131,3 @@ class RegistrationActivity : AppCompatActivity() {
     }
 }
 
-class User(val uid: String, val username: String, val profileImageUrl: String){
-    constructor() : this("", "", "")
-}

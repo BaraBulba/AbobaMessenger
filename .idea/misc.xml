@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/drawable/background_edittext_border.xml" value="0.262" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/drawable/button_shape.xml" value="0.262" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/drawable/custom_email_icon.xml" value="0.262" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/drawable/custom_lock_icon.xml" value="0.262" />
@@ -10,6 +11,8 @@
         <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/drawable/email_icon.xml" value="0.262" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/drawable/email_icon_custom.xml" value="0.262" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/drawable/email_icon_focused.xml" value="0.262" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/drawable/ic_baseline_message_24.xml" value="0.262" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/drawable/leave_arrow_icon.xml" value="0.262" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/drawable/lock_icon.xml" value="0.262" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/drawable/lock_icon_focused.xml" value="0.262" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/drawable/person_icon.xml" value="0.262" />
@@ -19,12 +22,16 @@
         <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/drawable/rounded_image_button.xml" value="0.262" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/drawable/rounded_shape.xml" value="0.262" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/drawable/rounded_shape_edittext.xml" value="0.262" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/drawable/search_icon.xml" value="0.262" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/layout/activity_chat_log.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/layout/activity_latest_messeges.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/layout/activity_login.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/layout/activity_new_message.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/layout/chat_from_row.xml" value="0.5" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/layout/chat_from_row.xml" value="0.33" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/layout/chat_to_row.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/layout/latest_messages_row.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/layout/registration_activity.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/layout/user_row_new_message.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/menu/nav_menu.xml" value="0.36666666666666664" />
       </map>

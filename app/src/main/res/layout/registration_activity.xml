@@ -14,7 +14,6 @@
         android:layout_height="50dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/rounded_shape_edittext"
-        android:backgroundTint="#FFFFFF"
         android:drawableStart="@drawable/custom_person_icon"
         android:drawablePadding="8dp"
         android:ems="10"
@@ -68,9 +67,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:background="@drawable/rounded_button"
+        android:background="@drawable/rounded_button_login"
         android:text="Зарегистрироваться"
-
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/password_edittext_registration"
         app:layout_constraintStart_toStartOf="@+id/password_edittext_registration"
