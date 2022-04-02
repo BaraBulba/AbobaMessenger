@@ -1,10 +1,15 @@
 package messages
 
+import android.app.Activity
+import android.content.Intent
 import android.example.abobamessenger.NewMessageActivity
 import android.example.abobamessenger.R
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.speech.RecognizerIntent
 import android.util.Log
+import android.widget.Button
+import androidx.core.app.ActivityCompat.startActivityForResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.ChildEventListener
 import com.google.firebase.database.DataSnapshot
@@ -25,6 +30,7 @@ class ChatLogActivity : AppCompatActivity() {
 
     companion object{
         val TAG = "Chat log"
+
     }
     val adapter = GroupieAdapter()
 
@@ -45,6 +51,8 @@ class ChatLogActivity : AppCompatActivity() {
             performSendMessage()
         }
     }
+
+
 
     private fun listenForMessages(){
         val fromId = FirebaseAuth.getInstance().uid
@@ -134,3 +142,5 @@ class ChatToItem(val text: String, val user: User): Item<GroupieViewHolder>() {
         }
     }
 }
+
+

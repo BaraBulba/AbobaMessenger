@@ -5,11 +5,11 @@
     <item android:id="@+id/menu_new_messege"
         android:title="New Message"
         app:showAsAction="ifRoom|collapseActionView"
-        android:icon="@drawable/message_icon"></item>
+        android:icon="@drawable/search_person_in_row"></item>
 
     <item android:id="@+id/menu_sign_out"
         android:title="Sign Out"
         app:showAsAction="ifRoom|collapseActionView"
-        android:icon="@drawable/leave_arrow_icon"></item>
+        android:icon="@drawable/sign_out_icon"></item>
 
 </menu>
