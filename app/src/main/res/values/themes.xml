@@ -14,9 +14,9 @@
         <!-- Customize your theme here. -->
     </style>
     
-    <style name="TextAppearance.AppCompat.Widget.ActionBar.Title." parent="@style/TextAppearance.AppCompat">
-        <item name="android:textSize">24sp</item>
-        <item name="android:textColor">#FF000000</item>
-        <item name="android:fontFamily">#FFFFFFFF</item>
-    </style>
+<!--    <style name="TextAppearance.AppCompat.Widget.ActionBar.Title." parent="@style/TextAppearance.AppCompat">-->
+<!--        <item name="android:textSize">24sp</item>-->
+<!--        <item name="android:textColor">#FF000000</item>-->
+<!--        <item name="android:fontFamily">#FFFFFFFF</item>-->
+<!--    </style>-->
 </resources>

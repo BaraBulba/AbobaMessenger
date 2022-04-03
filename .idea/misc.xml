@@ -13,6 +13,7 @@
         <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/drawable/email_icon.xml" value="0.262" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/drawable/email_icon_custom.xml" value="0.262" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/drawable/email_icon_focused.xml" value="0.262" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/drawable/home_icon.xml" value="0.262" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/drawable/ic_baseline_message_24.xml" value="0.262" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/drawable/ic_launcher_background.xml" value="0.262" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/drawable/leave_arrow_icon.xml" value="0.262" />
@@ -28,6 +29,7 @@
         <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/drawable/rounded_shape_edittext.xml" value="0.262" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/drawable/rounded_text_view_60.xml" value="0.262" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/drawable/search_icon.xml" value="0.262" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/drawable/search_view_background_shape.xml" value="0.262" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/drawable/send_icon_button.xml" value="0.262" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/layout/activity_chat_log.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/layout/activity_latest_messeges.xml" value="0.36666666666666664" />
@@ -36,8 +38,10 @@
         <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/layout/activity_new_message.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/layout/chat_from_row.xml" value="0.33" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/layout/chat_to_row.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/layout/custom_app_bar_layout.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/layout/latest_messages_row.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/layout/registration_activity.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/layout/user_info.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/layout/user_row_new_message.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/menu/bottom_menu.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/AbobaMessenger/app/src/main/res/menu/nav_menu.xml" value="0.36666666666666664" />

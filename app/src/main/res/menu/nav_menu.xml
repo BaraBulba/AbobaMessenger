@@ -2,14 +2,24 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item android:id="@+id/menu_new_messege"
+    <item android:id="@+id/search_icon"
         android:title="New Message"
         app:showAsAction="ifRoom|collapseActionView"
         android:icon="@drawable/search_person_in_row"></item>
 
-    <item android:id="@+id/menu_sign_out"
+    <item android:id="@+id/sign_out_icon"
         android:title="Sign Out"
         app:showAsAction="ifRoom|collapseActionView"
         android:icon="@drawable/sign_out_icon"></item>
 
+<!--    <item android:id="@+id/latestMessegesActivity"-->
+<!--        android:title="Home page"-->
+<!--        app:showAsAction="ifRoom|collapseActionView"-->
+<!--        android:icon="@drawable/home_icon">-->
+<!--    </item>-->
+
+<!--    <item android:id="@+id/search_icon"-->
+<!--        android:title="Search"-->
+<!--        app:showAsAction="ifRoom|collapseActionView"-->
+<!--        android:icon="@drawable/search_icon"></item>-->
 </menu>

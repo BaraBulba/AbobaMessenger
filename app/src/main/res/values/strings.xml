@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">AbobaMessenger</string>
+    <string name="no_match">No match found</string>
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>
     <string name="sync_header">Sync</string>

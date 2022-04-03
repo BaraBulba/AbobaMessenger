@@ -17,6 +17,10 @@ class LatestMessageRow(val chatMessage: ChatMessage): Item<GroupieViewHolder>(){
 
     var chatPartnerUser: User? = null
 
+    fun getUser(): User? {
+        return chatPartnerUser
+    }
+
     override fun bind(viewHolder: GroupieViewHolder, position: Int) {
         viewHolder.itemView.latest_message_row_textView_message.text = chatMessage.text
 
@@ -33,7 +37,6 @@ class LatestMessageRow(val chatMessage: ChatMessage): Item<GroupieViewHolder>(){
             override fun onDataChange(snapshot: DataSnapshot) {
                 chatPartnerUser = snapshot.getValue(User::class.java)
                 viewHolder.itemView.latest_message_row_textView_username.text = chatPartnerUser?.username
-
                 val targetImageView = viewHolder.itemView.latest_message_row_textView_image
                 Picasso.get().load(chatPartnerUser?.profileImageUrl).into(targetImageView)
             }
