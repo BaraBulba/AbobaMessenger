@@ -7,24 +7,20 @@ import android.example.abobamessenger.RegistrationActivity
 //import android.example.abobamessenger.databinding.ActivityLatestMessegesBinding
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.TextWatcher
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Adapter
-import android.widget.SearchView
-import androidx.appcompat.app.ActionBar
+import android.widget.Toast
 import androidx.core.content.ContextCompat
+import androidx.navigation.NavController
+import androidx.navigation.ui.AppBarConfiguration
 import androidx.recyclerview.widget.DividerItemDecoration
-import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import com.xwray.groupie.GroupieAdapter
-import com.xwray.groupie.GroupieViewHolder
 import kotlinx.android.synthetic.main.activity_latest_messeges.*
-import kotlinx.android.synthetic.main.custom_app_bar_layout.*
-import kotlinx.android.synthetic.main.latest_messages_row.*
 import models.ChatMessage
 import models.User
 import views.LatestMessageRow
@@ -35,7 +31,9 @@ class LatestMessegesActivity : AppCompatActivity() {
 
         var currentUser: User? = null
     }
-
+    private lateinit var bottomNav: BottomNavigationView
+    private lateinit var botBarConfiguration: AppBarConfiguration
+    private lateinit var navController: NavController
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_latest_messeges)
@@ -77,6 +75,11 @@ class LatestMessegesActivity : AppCompatActivity() {
         verifyUserIsLoggedIn()
 
         bottom_nav_view.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), android.R.color.transparent))
+
+        search_person_button.setOnClickListener {
+            Toast.makeText(this, "Fab clicked", Toast.LENGTH_SHORT).show()
+        }
+
 
     }
 
@@ -171,7 +174,7 @@ class LatestMessegesActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.search_person_button -> {
+            R.id.home_icon -> {
                 val intent = Intent(this, NewMessageActivity::class.java)
                 startActivity(intent)
             }

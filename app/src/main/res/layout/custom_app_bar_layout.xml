@@ -13,30 +13,29 @@
         android:layout_height="wrap_content">
 
         <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?actionBarSize"
-            android:id="@+id/toolbar"
-            android:elevation="4dp"
             android:background="@color/white"
-            >
+            android:elevation="4dp">
+
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/abobagram_icon"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="8dp"
-                android:src="@drawable/abobagram_icon_ua"
-                android:padding="8dp">
-            </de.hdodenhof.circleimageview.CircleImageView>
+                android:padding="8dp"
+                android:src="@drawable/abobagram_icon_ua"></de.hdodenhof.circleimageview.CircleImageView>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Abobagram"
-                android:fontFamily="@font/painter"
                 android:layout_gravity="center"
-                android:textSize="32sp"
+                android:fontFamily="@font/painter"
                 android:padding="8dp"
-                android:textColor="@color/black">
-            </TextView>
+                android:text="Abobagram"
+                android:textColor="@color/black"
+                android:textSize="32sp"></TextView>
 
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
