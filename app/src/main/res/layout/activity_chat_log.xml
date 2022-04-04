@@ -5,8 +5,7 @@
     android:id="@+id/chat_log_editText"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="messages.ChatLogActivity"
-    android:background="@color/white">
+    tools:context="messages.ChatLogActivity">
 
     <EditText
         android:id="@+id/editText_chat_log"
@@ -22,18 +21,16 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/chat_log_sendbutton"
+        app:layout_constraintEnd_toStartOf="@+id/send_button"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/micro_button" />
 
     <Button
-        android:id="@+id/chat_log_sendbutton"
+        android:id="@+id/send_button"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="12dp"
-        android:textColor="@color/white"
-        android:textStyle="bold"
         android:background="@drawable/send_icon_v2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -59,4 +56,6 @@
         android:background="@drawable/microphone_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

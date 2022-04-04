@@ -14,13 +14,16 @@ import android.view.MenuItem
 import android.widget.Adapter
 import android.widget.SearchView
 import androidx.appcompat.app.ActionBar
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import com.xwray.groupie.GroupieAdapter
 import com.xwray.groupie.GroupieViewHolder
 import kotlinx.android.synthetic.main.activity_latest_messeges.*
+import kotlinx.android.synthetic.main.custom_app_bar_layout.*
 import kotlinx.android.synthetic.main.latest_messages_row.*
 import models.ChatMessage
 import models.User
@@ -37,8 +40,14 @@ class LatestMessegesActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_latest_messeges)
 
+
+//        supportActionBar?.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
+//        supportActionBar?.setDisplayShowCustomEnabled(true)
+//        supportActionBar?.setCustomView(R.layout.custom_app_bar_layout)
+
         recyclerView_for_the_latest_messages.adapter = adapter
         recyclerView_for_the_latest_messages.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
+
 
 //        search_view.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
 //            override fun onQueryTextSubmit(query: String?): Boolean {
@@ -67,9 +76,8 @@ class LatestMessegesActivity : AppCompatActivity() {
         listenForLatestMessages()
         verifyUserIsLoggedIn()
 
-        supportActionBar?.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
-        supportActionBar?.setDisplayShowCustomEnabled(true)
-        supportActionBar?.setCustomView(R.layout.custom_app_bar_layout)
+        bottom_nav_view.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), android.R.color.transparent))
+
     }
 
 //    private  fun filterSearch(text: String) {
@@ -163,11 +171,11 @@ class LatestMessegesActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.search_icon -> {
+            R.id.search_person_button -> {
                 val intent = Intent(this, NewMessageActivity::class.java)
                 startActivity(intent)
             }
-            R.id.sign_out_icon ->{
+            R.id.settings_icon ->{
                 FirebaseAuth.getInstance().signOut()
                 val intent = Intent(this, RegistrationActivity::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)

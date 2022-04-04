@@ -46,7 +46,7 @@ class ChatLogActivity : AppCompatActivity() {
         supportActionBar?.title = toUser?.username
         listenForMessages()
 
-        chat_log_sendbutton.setOnClickListener {
+        send_button.setOnClickListener {
             Log.d(TAG,"attempt to send message")
             performSendMessage()
         }
