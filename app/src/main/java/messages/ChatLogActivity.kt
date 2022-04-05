@@ -1,11 +1,11 @@
 package messages
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.example.abobamessenger.NewMessageActivity
 import android.example.abobamessenger.R
 import android.os.Bundle
 import android.util.Log
-import androidx.appcompat.app.ActionBar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.ChildEventListener
 import com.google.firebase.database.DataSnapshot
@@ -49,6 +49,12 @@ class ChatLogActivity : AppCompatActivity() {
             Log.d(TAG,"attempt to send message")
             performSendMessage()
         }
+
+        back_to_main_screen_button.setOnClickListener {
+            val intent = Intent(this, LatestMessagesActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(intent)
+        }
     }
 
 
@@ -66,7 +72,7 @@ class ChatLogActivity : AppCompatActivity() {
                 Log.d(TAG, chatMessage.text)
 
                 if (chatMessage.fromId == FirebaseAuth.getInstance().uid){
-                    val currentUser = LatestMessegesActivity.currentUser ?: return
+                    val currentUser = LatestMessagesActivity.currentUser ?: return
                     adapter.add(ChatFromItem(chatMessage.text, currentUser))
                 } else{
                     adapter.add(ChatToItem(chatMessage.text, toUser!!))

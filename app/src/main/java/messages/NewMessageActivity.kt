@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.KeyEvent
 import androidx.recyclerview.widget.DividerItemDecoration
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -16,19 +17,35 @@ import com.xwray.groupie.Item
 import kotlinx.android.synthetic.main.activity_new_message.*
 import kotlinx.android.synthetic.main.user_row_new_message.view.*
 import messages.ChatLogActivity
+import messages.LatestMessagesActivity
 import models.User
 
 class NewMessageActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new_message)
+
         supportActionBar?.title = "Выберите пользователя"
+        supportActionBar?.setIcon(R.drawable.abobagram_icon_ua)
+
         recyclerview_newmessage.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
         fetchUsers()
+//        backToScreen()
     }
     companion object{
         val USER_KEY = "USER_KEY"
     }
+
+//    private fun backToScreen() {
+//        back_to_main_screen_button_new_message_activity.setOnClickListener {
+//            val intent = Intent(this, LatestMessagesActivity::class.java)
+//            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
+//            startActivity(intent)
+//            finish()
+//        }
+//    }
+
+
 
     private fun fetchUsers() {
         val ref = FirebaseDatabase.getInstance("https://abobagram-default-rtdb.europe-west1.firebasedatabase.app").getReference("/users/")

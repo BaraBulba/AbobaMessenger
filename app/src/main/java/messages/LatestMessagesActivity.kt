@@ -4,19 +4,16 @@ import android.content.Intent
 import android.example.abobamessenger.NewMessageActivity
 import android.example.abobamessenger.R
 import android.example.abobamessenger.RegistrationActivity
-//import android.example.abobamessenger.databinding.ActivityLatestMessegesBinding
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import androidx.appcompat.app.ActionBar
+import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
-import androidx.navigation.NavController
-import androidx.navigation.ui.AppBarConfiguration
 import androidx.recyclerview.widget.DividerItemDecoration
-import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import com.xwray.groupie.GroupieAdapter
@@ -25,23 +22,21 @@ import models.ChatMessage
 import models.User
 import views.LatestMessageRow
 
-class LatestMessegesActivity : AppCompatActivity() {
+class LatestMessagesActivity : AppCompatActivity() {
 
     companion object{
 
         var currentUser: User? = null
     }
-    private lateinit var bottomNav: BottomNavigationView
-    private lateinit var botBarConfiguration: AppBarConfiguration
-    private lateinit var navController: NavController
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_latest_messeges)
 
 
-//        supportActionBar?.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
-//        supportActionBar?.setDisplayShowCustomEnabled(true)
-//        supportActionBar?.setCustomView(R.layout.custom_app_bar_layout)
+        supportActionBar?.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
+        supportActionBar?.setDisplayShowCustomEnabled(true)
+        supportActionBar?.setCustomView(R.layout.custom_app_bar_layout)
 
         recyclerView_for_the_latest_messages.adapter = adapter
         recyclerView_for_the_latest_messages.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
@@ -61,7 +56,7 @@ class LatestMessegesActivity : AppCompatActivity() {
 
 
 
-        adapter.setOnItemClickListener { item, view ->
+        adapter.setOnItemClickListener { item, _ ->
             Log.d("Latest Messages", "123")
             val intent = Intent(this, ChatLogActivity::class.java)
             val row = item as LatestMessageRow
@@ -74,11 +69,18 @@ class LatestMessegesActivity : AppCompatActivity() {
         listenForLatestMessages()
         verifyUserIsLoggedIn()
 
-        bottom_nav_view.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), android.R.color.transparent))
+//        bottom_nav_view.setBackgroundColor(ContextCompat.getColor(applicationContext, android.R.color.transparent))
+//
+//        fab_search_person_button.setOnClickListener {
+//            Toast.makeText(this, "Новое сообщение", Toast.LENGTH_SHORT).show()
+//
+//            val intent = Intent(this, NewMessageActivity::class.java)
+//            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
+//            startActivity(intent)
+//            finish()
+//        }
 
-        search_person_button.setOnClickListener {
-            Toast.makeText(this, "Fab clicked", Toast.LENGTH_SHORT).show()
-        }
+
 
 
     }
@@ -146,7 +148,7 @@ class LatestMessegesActivity : AppCompatActivity() {
             }
         })
     }
-    val adapter = GroupieAdapter()
+    private val adapter = GroupieAdapter()
 
     private fun fetchCurrentUser(){
         val uid = FirebaseAuth.getInstance().uid
@@ -186,6 +188,10 @@ class LatestMessegesActivity : AppCompatActivity() {
             }
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    override fun setSupportActionBar(toolbar: Toolbar?) {
+        super.setSupportActionBar(toolbar)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

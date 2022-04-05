@@ -28,12 +28,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Chat"
-                android:fontFamily="@font/mandala"
+                android:fontFamily="@font/painter"
                 android:textColor="@color/white"
                 android:textSize="32sp"
                 android:layout_gravity="center">
-
             </TextView>
+
+            <Button
+                android:id="@+id/back_to_main_screen_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/back_icon"
+                android:layout_gravity="left"
+                android:padding="8dp">
+            </Button>
+
 
 
         </androidx.appcompat.widget.Toolbar>
@@ -44,7 +53,7 @@
         android:id="@+id/editText_chat_log"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/background_edittext_border"
         android:ems="10"
         android:hint="Сообщение ..."
@@ -63,6 +72,7 @@
         android:id="@+id/send_button"
         android:layout_width="40dp"
         android:layout_height="40dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="12dp"
         android:background="@drawable/send_icon_v2"

@@ -6,14 +6,50 @@
     android:layout_height="match_parent"
     tools:context=".NewMessageActivity">
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout_new_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_new_message"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/blueV2"
+        android:elevation="4dp">
+
+    <TextView
+        android:id="@+id/username_new_message_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Выберите пользователя"
+        android:fontFamily="@font/painter"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_gravity="center">
+    </TextView>
+
+    <Button
+        android:id="@+id/back_to_main_screen_button_new_message_activity"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/back_icon"
+        android:layout_gravity="left"
+        android:padding="8dp">
+    </Button>
+    </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview_newmessage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout_new_message" />
 </androidx.constraintlayout.widget.ConstraintLayout>
